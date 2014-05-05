@@ -1,0 +1,15 @@
+div#clip {
+	background-color: #344; opacity: 0.6;
+	color: #efe;
+	margin: 3em; padding: 1.5em; width: 22em;
+	font: 1.4em/1.8em Georgia;
+}
+
+section {color: lightgrey}
+
+div.navbutton {
+	border: 1px grey solid; padding: 5px;
+  height: 20px; width: 120px;
+  color: grey;
+  position:absolute; right: 20px; bottom: 20px;
+}

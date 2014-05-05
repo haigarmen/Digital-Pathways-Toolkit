@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>WolfDeck</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="css/wolfdeck.css">
+		
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <!-- <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css"> -->
+  <link rel="stylesheet" media="screen" href="themes/transition/fade.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+<section class="slide" style = "background:url(img/darkforest.jpg);">
+	<div class="textbox" style="top: 200px;">
+	<p><i>Once upon a time,</i>
+ 		in a deep, dark forest, there was a wolf.</p>
+	<p> The wolf was hungry, and lonely, and he was wet.</p>
+	</div>
+</section>
+
+<section class="slide" style="background:url(img/howling.jpg);">
+	<div class="textbox" style="top: 240px;">
+<p><i>Once upon a time...</i><br />
+the wolf had travelled with a pack, and in those days, he wasn't lonely.</p>
+<p>But there had been fights, and it had been bad. The wolf was now on his own. He was a lone wolf.</p>
+	</div>
+</section>
+
+<section class="slide" style="background:url(img/winterforest.jpg);">
+	<div class="right textbox" style="top: 380px;">
+	<p>The wolf's lonely days and nights stretched on without end. He stalked, and he hunted small animals. But he was unhappy, and unfulfilled.</p>
+	<h2 class="textmask">always seeking</h2>
+</div>
+<div class="midground">
+	<img src="img/winterforest.jpg" width=600 height=400 class="wolf maskit" style="margin: 300px 0 0 0;
+	">
+</div>
+</section>
+
+<section class="slide" style="background:url(img/lights.jpg);">
+	<div class="textbox">
+<p>Late one night, on a cold autumn evening, the wolf smelled something on the wind. It was a new smell... enticing, and yet somehow not quite right.</p>
+<p>The wolf followed the smell, until he could see a glow through the trees.</p>
+</div>
+</section>
+
+<section class="slide" style="background:url(img/forest-glow.jpg);">
+	<div class="right textbox">
+<p>The glow was more than just light, it emitted a low rumbling hum</p>
+<p>This didn't please the wolf but he moved toward it regardless.</p>
+</div>
+</section>
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>
