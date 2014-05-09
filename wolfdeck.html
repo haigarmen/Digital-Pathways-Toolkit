@@ -20,6 +20,9 @@
 
   <!-- Style theme. More available in /themes/style/ or create your own. -->
   <link rel="stylesheet" media="screen" href="css/wolfdeck.css">
+
+	<!-- media player needs a stylesheet too-->
+	<link rel="stylesheet" href="scripts/build/mediaelementplayer.min.css" />
 		
   <!-- Transition theme. More available in /themes/transition/ or create your own. -->
   <!-- <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css"> -->
@@ -76,6 +79,21 @@ the wolf had travelled with a pack, and in those days, he wasn't lonely.</p>
 <p>This didn't please the wolf but he moved toward it regardless.</p>
 </div>
 </section>
+
+
+<section class="slide" style="background:url(img/forest-glow.jpg);">
+	<div class="right textbox">
+<p>The wolf moved through the forest slowly and methodically</p>
+<p>Each step was with care</p>
+</div>
+<div class="background">
+	<video width="1280" height="720" src="media/forest-fade.mp4" controls type="video/mp4" id="player1" autoplay ></video>
+	<!-- data-setup='{"controls": "false", "autoplay": "true", "preload": "auto" , "loop": "true",}' -->
+</div>
+</section>
+
+
+
     <!-- End slides. -->
 
     <!-- Begin extension snippets. Add or remove as needed. -->
@@ -114,6 +132,10 @@ the wolf had travelled with a pack, and in those days, he wasn't lonely.</p>
 <script src="extensions/status/deck.status.js"></script>
 <script src="extensions/navigation/deck.navigation.js"></script>
 <script src="extensions/scale/deck.scale.js"></script>
+
+<!--	JS for the media player -->
+<script src="scripts/build/mediaelement-and-player.min.js"></script>
+<script src="testforfiles.js"></script>	
 
 <!-- Initialize the deck. You can put this in an external file if desired. -->
 <script>
