@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+$for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+$endfor$
+$if(date-meta)$
+  <meta name="date" content="$date-meta$" />
+$endif$
+  <title>$if(title-prefix)$$title-prefix$ - $endif$$if(pagetitle)$$pagetitle$$endif$</title>
+
+  <link rel="stylesheet" media="screen" href="templ/core/deck.core.css">
+  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="templ/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="templ/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="templ/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="templ/extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="templ/extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="templ/css/wolfdeck.css">
+    
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <!-- <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css"> -->
+  <link rel="stylesheet" media="screen" href="templ/themes/transition/fade.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="templ/core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="templ/modernizr.custom.js"></script>
+
+
+$for(header-includes)$
+  $header-includes$
+$endfor$
+
+
+</head>
+<body>
+$for(include-before)$
+$include-before$
+$endfor$
+$if(title)$
+<div id="$idprefix$header">
+<h1 class="title">$title$</h1>
+$for(author)$
+<h2 class="author">$author$</h2>
+$endfor$
+$if(date)$
+<h3 class="date">$date$</h3>
+$endif$
+</div>
+$endif$
+$if(toc)$
+<div id="$idprefix$TOC">
+$toc$
+</div>
+$endif$
+
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+$body$
+
+
+  <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="templ/jquery.min.js"></script>
+<script src="templ/core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="templ/extensions/menu/deck.menu.js"></script>
+<script src="templ/extensions/goto/deck.goto.js"></script>
+<script src="templ/extensions/status/deck.status.js"></script>
+<script src="templ/extensions/navigation/deck.navigation.js"></script>
+<script src="templ/extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  jQuery(function() {
+    jQuery.deck('.slide');
+  });
+</script>
+
+<script>$(document).bind('deck.change', function(event, from, to) {
+  $(".showlater").hide();
+  setTimeout(function() {
+    //alert('Moving from slide ' + from + ' to ' + to);
+    $(".showlater").show();
+    var audioclip = $('.deck-current audio').get(0);
+    audioclip.play();
+   }, 4000);
+
+});
+</script>
+</body>
+</html>
+
