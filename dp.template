@@ -120,8 +120,12 @@ $body$
 </script>
 
 <script>jQuery(document).bind('deck.change', function(event, from, to) {
-  jQuery("section  section.deck-before").hide();
-  jQuery("section  section.deck-current").hide();
+  jQuery("section.ephemeral  section.deck-before").hide();
+  jQuery("section.ephemeral  section.deck-current").hide();
+
+  //  var audioclip = jQuery('.deck-current audio').get(0);
+  //  audioclip.play();
+
   //jQuery("section.deck-current").show();
   //setTimeout(function() {
     //alert('Moving from slide ' + from + ' to ' + to);
