@@ -11,4 +11,4 @@ echo $stub
 #/home/jmax/.cabal/bin/pandoc -sS
 
 pandoc -sS --template=dp.template --section-divs  \
-    -f markdown -t html5 -o ../$stub".html" "$1"
+    -f markdown -t html5 -o /var/www/pw/$stub".html" "$1"

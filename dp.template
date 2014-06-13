@@ -26,7 +26,7 @@ $endif$
   <link rel="stylesheet" media="screen" href="templ/extensions/scale/deck.scale.css">
 
   <!-- Style theme. More available in /themes/style/ or create your own. -->
-  <link rel="stylesheet" media="screen" href="templ/css/wolfdeck.css">
+  <link rel="stylesheet" media="screen" href="templ/css/dpathways.css">
     
   <!-- Transition theme. More available in /themes/transition/ or create your own. -->
   <!-- <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css"> -->
@@ -119,14 +119,16 @@ $body$
   });
 </script>
 
-<script>$(document).bind('deck.change', function(event, from, to) {
-  $(".showlater").hide();
-  setTimeout(function() {
+<script>jQuery(document).bind('deck.change', function(event, from, to) {
+  jQuery("section  section.deck-before").hide();
+  jQuery("section  section.deck-current").hide();
+  //jQuery("section.deck-current").show();
+  //setTimeout(function() {
     //alert('Moving from slide ' + from + ' to ' + to);
-    $(".showlater").show();
-    var audioclip = $('.deck-current audio').get(0);
-    audioclip.play();
-   }, 4000);
+    //jQuery(".showlater").show();
+    //var audioclip = jQuery('.deck-current audio').get(0);
+    //audioclip.play();
+   //}, 4000);
 
 });
 </script>
