@@ -1,11 +1,15 @@
 // master bg audio for whole deck:
 jQuery(document).bind('deck.init', function(event, from, to) {
   var jaudioclip = jQuery('.deck-current audio');
+
+  var fadein = jaudioclip.data('fadein') || 1000;
   jaudioclip.prop('volume', 0);
   jaudioclip.trigger('play');
-  jaudioclip.animate({volume: 1}, 1000);
+  jaudioclip.animate({volume: 1}, fadein);
 
 });
+
+//btw... good docs here: http://codesamplez.com/programming/control-html5-audio-with-jquery
 
 
 // hide older subslides as the current one appears.
