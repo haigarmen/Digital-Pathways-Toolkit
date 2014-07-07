@@ -193,6 +193,10 @@ h2.textmask {
 	width: auto;
 	height: auto;
 	z-index: -100;
+<<<<<<< HEAD
+=======
+	background-color: red;
+>>>>>>> 0a6f816e6c173a368b4f7886a5446c65d51365d5
 /*	background-size: cover;*/
 	overflow: hidden;
 }
@@ -306,7 +310,23 @@ h2.textmask {
 .pink:after {
     background:#fb89df;
 }
+<<<<<<< HEAD
 
 .helpyou {
 	background:red;
 }
+=======
+.helpyou {
+	background:red;
+}
+#globalnav {
+	position: fixed;
+	right: 0;
+	min-width: 10px;
+	min-height: 100%;
+	width: 30px;
+	height: auto;
+	z-index: 10;
+	background-color: red;
+}
+>>>>>>> 0a6f816e6c173a368b4f7886a5446c65d51365d5
