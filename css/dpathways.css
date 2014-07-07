@@ -3,10 +3,19 @@ body {
 	color: #FFF;
 	font-family: "Georgia";
 	margin: auto;
-	width: 1280px;
-	font-size: 14px;
+	/*width: 1280px;    -- NOT AT ALL SURE THIS IS WORKING FOR US see .slide below*/
+	font-size: 14px; 
 }
-	
+
+section.slide {
+	background-position: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
 p {
 	font: 1.4em/1.8em Georgia;
 	-webkit-margin-before: 0px;
@@ -14,6 +23,85 @@ p {
 	text-shadow: 0px 2px 6px rgba(0,0,0,.5);
 	text-align: left;
 }
+
+.nextSec {
+  border: rgba(86,135,178,.8);
+  padding: 1em;
+  background-color: rgba(203,203,203,.5);
+  position: absolute; right:20px; bottom:20px;
+}
+
+#globalnav {
+	list-style: none;
+	position: fixed;
+	left: 0;
+	min-width: 20px;
+	min-height: 100%;
+	width: 20px;
+	height: auto;
+	z-index: 10;
+}
+
+#globalnav ul {
+	padding: 0;
+	margin: 0;
+	min-width: 20px;
+	min-height: 100%;
+}
+#globalnav li {
+	min-width: 20px;
+	min-height: 14%;	
+}
+#globalnav li a {
+	display: block;
+	min-width: 20px;
+	min-height: 100%;
+	padding: 0px;
+	text-indent: -9999px;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	-webkit-transition: 0.5s ease;
+	-moz-transition: 0.5s ease;
+	-ms-transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	transition: 0.5s ease;
+}
+
+#globalnav ul li:nth-child(1) {  
+  background-color: rgba(255,255,255,.5);
+}
+
+#globalnav ul li:nth-child(2) {  
+  background-color: rgba(203,203,203,.5);
+}
+
+#globalnav ul li:nth-child(3) {  
+  background-color: rgba(119,150,179,.5);
+}
+
+#globalnav ul li:nth-child(4) {  
+  background-color: rgba(86,135,178,.5);
+}
+
+#globalnav ul li:nth-child(5) {  
+  background-color: rgba(62,122,176,.5);
+}
+
+#globalnav ul li:nth-child(6) {  
+  background-color: rgba(21,75,137,.5);
+}
+
+#globalnav ul li:nth-child(7) {  
+  background-color: rgba(6,54,111,.5);
+}
+
+#globalnav li a:hover {
+border-left: 20px solid rgba(255,255,255,.5);
+}
+
 
 .box {
 	padding: 30px;
@@ -100,14 +188,11 @@ h2.textmask {
 #bgvid {
 	position: fixed;
 	right: 0;
-	bottom: -535px;
 	min-width: 100%;
 	min-height: 100%;
 	width: auto;
 	height: auto;
 	z-index: -100;
-	background: url('../img/forest-1.jpg') no-repeat;
-	background-color: red;
 /*	background-size: cover;*/
 	overflow: hidden;
 }
@@ -220,4 +305,8 @@ h2.textmask {
 .pink,
 .pink:after {
     background:#fb89df;
+}
+
+.helpyou {
+	background:red;
 }

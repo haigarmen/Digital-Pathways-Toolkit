@@ -24,6 +24,7 @@ $endif$
   <link rel="stylesheet" media="screen" href="templ/extensions/navigation/deck.navigation.css">
   <link rel="stylesheet" media="screen" href="templ/extensions/status/deck.status.css">
   <link rel="stylesheet" media="screen" href="templ/extensions/scale/deck.scale.css">
+  <link rel="stylesheet" media="screen" href="templ/extensions/globalnav/deck.globalnav.css">
 
   <!-- Style theme. More available in /themes/style/ or create your own. -->
   <link rel="stylesheet" media="screen" href="templ/css/dpathways.css">
@@ -77,6 +78,18 @@ $body$
 
     <!-- Begin extension snippets. Add or remove as needed. -->
 
+	<div id="globalnav">
+	    <ul>
+			<li><a href="index.html">Opening</a></li>
+			<li><a href="RefusingToLeave.html">Moment 1</a></li>
+	    	<li><a href="SheHeadsDowntown.html">Moment 2</a></li>
+	    	<li><a href="PhotoMonologue.html">Moment 3</a></li>
+	    	<li><a href="SheMeetsThePunks.html">Moment 4</a></li>
+	    	<li><a href="MapMonologue.html">Moment 5</a></li>
+	    	<li><a href="CanoeEncounter.html">Moment 6</a></li>
+		</ul>
+	  </div>
+
     <!-- deck.navigation snippet -->
     <div aria-role="navigation">
       <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
@@ -119,23 +132,9 @@ $body$
   });
 </script>
 
-<script>jQuery(document).bind('deck.change', function(event, from, to) {
-  jQuery("section.ephemeral  section.deck-before").hide();
-  jQuery("section.ephemeral  section.deck-current").hide();
+ <!-- Trigger sound and animation -->
+<script src="templ/scripts/pathways.js"></script>
 
-  //  var audioclip = jQuery('.deck-current audio').get(0);
-  //  audioclip.play();
-
-  //jQuery("section.deck-current").show();
-  //setTimeout(function() {
-    //alert('Moving from slide ' + from + ' to ' + to);
-    //jQuery(".showlater").show();
-    //var audioclip = jQuery('.deck-current audio').get(0);
-    //audioclip.play();
-   //}, 4000);
-
-});
-</script>
 </body>
 </html>
 
