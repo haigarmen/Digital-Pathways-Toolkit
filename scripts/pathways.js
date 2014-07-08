@@ -23,7 +23,7 @@ jQuery(document).bind('deck.init', function(event, from, to) {
 
 // Aaaaaaand... we need a way to trigger first-slide audio automatically.
 
-jQuery(document).bind('deck.change', function(event, from, to) {
+jQuery(document).bind('deck.cXXXXXhange', function(event, from, to) {
   var lastclip = jQuery('.deck-previous audio');
   var audioclip = jQuery('.deck-current audio');
   var fadetime = audioclip.data('fadein') || 1000;
